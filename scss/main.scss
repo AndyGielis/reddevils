@@ -2,40 +2,38 @@
 // je vindt _variables.scss en alle andere Bootstrap Sass bestanden op onderstaand pad
 //ook utilities overschrijven kan op deze plaats - vergeet niet de !default flag mee over te nemen
 
-$body-bg: whitesmoke!default;
-$primary: goldenrod!default;
-$secondary: #222!default;
-$nav-pills-link-active-color: $secondary!default;
-$nav-pills-link-active-bg: goldenrod!default;
-$link-color: whitesmoke!default;
+$primary: goldenrod !default;
+$secondary: #222 !default;
+$third: whitesmoke;
+$body-bg: $third!default;
+$nav-pills-link-active-color: $secondary !default;
+$nav-pills-link-active-bg: goldenrod !default;
+$link-color: whitesmoke !default;
 $link-decoration: uppercase;
-$accordion-icon-color: $primary!default;
-$accordion-button-bg: $secondary!default;
-$accordion-button-color: whitesmoke!default;
-$card-color: $primary!default;
-$card-bg: $secondary!default;
-$card-border-color: whitesmoke!default;
+$accordion-icon-color: $primary !default;
+$accordion-button-bg: $secondary !default;
+$accordion-button-color: whitesmoke !default;
+$card-color: $primary !default;
+$card-bg: $secondary !default;
 $link-decoration: none;
-
+$box-shadow: 0 8px 8px 0 rgba(31, 30, 30, 0.2), 0 6px 20px 0 rgba(37, 36, 36, 0.19);
 
 
 @import "./node_modules/bootstrap/scss/bootstrap";
-@import "./node_modules/bootstrap/scss/variables";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
 
 
 
 //extra custom code plaats je onder het inladen, bv.:
 
-.header {
-  position: sticky;
-  z-index: 9999;
-  top: 0;
 
-  .navbar img {
-    width: 50px;
-    height: auto;
-  }
+.navbar img {
+  width: 50px;
+  height: auto;
+}
+
+.display-6 {
+  padding: 2rem 0;
 }
 
 .nav-link {
@@ -54,27 +52,18 @@ $link-decoration: none;
     );
 }
 
+.card {
+  border: none;
+}
+
 .info,
 .spelers,
+.sub-info,
+.sponsors,
 .contact {
-  margin-bottom: 9rem;
+  padding-bottom: 15rem;
 }
 
-.info{
-  padding: 2rem 0;
-}
-
-
-.main {
-  padding: 1rem 0;
-}
-
-
-
-.infopic img {
-  box-shadow: 0 8px 8px 0 rgba(31, 30, 30, 0.2), 0 6px 20px 0 rgba(37, 36, 36, 0.19);
-  border-radius: 12px;
-}
 
 .card {
   transition: .25s ease-in-out;
@@ -88,8 +77,8 @@ $link-decoration: none;
 }
 
 .footer {
-  background-color:$secondary;
-  color: white;
+  background-color: $secondary;
+  color:$third;
   padding: 4rem;
 }
 
@@ -101,7 +90,7 @@ $link-decoration: none;
   &:hover {
     animation: hanging 2s infinite;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    color: gold;
+    color: $primary;
     filter: brightness(110%);
   }
 }
